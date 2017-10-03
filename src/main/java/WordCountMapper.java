@@ -17,7 +17,8 @@ public class WordCountMapper
         /* we need to parse each line for obtaining the words available on that line*/
         Text word = new Text();
         StringTokenizer tokenizer = new StringTokenizer(value.toString()
-                .replaceAll("[^A-Za-z]+", " ").toLowerCase());
+                .replaceAll("[^A-Za-z]+", " ")
+                .toLowerCase());
 
         while(tokenizer.hasMoreTokens()) {
             word.set(tokenizer.nextToken());
